@@ -1,17 +1,29 @@
 import React from 'react';
-import './NavBar.css'; // Asegúrate de que el nombre del archivo y la ruta sean correctos.
+import CartWidget from './CartWidget'; // Asegúrate de que la ruta sea correcta.
 
 function NavBar() {
   return (
-    <nav className="navbar">
-      {/* Se puede agregar una 'marca' o logo si tienes una */}
-      <div className="navbar-brand">Hakkens Digital</div>
-      <ul className="navbar-menu">
-        {/* Los enlaces ahora están organizados dentro de una lista para una mejor estructura y estilo */}
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/productos">Productos</a></li>
-        <li><a href="/contacto">Contacto</a></li>
-      </ul>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/">Hakkens Digital</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="/">Inicio</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/productos">Productos</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <CartWidget />
+      </div>
     </nav>
   );
 }

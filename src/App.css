@@ -53,3 +53,14 @@
 }
 
 /* Ajustes adicionales y componentes específicos aquí */
+.cart-widget {
+  color: white; /* Asegúrate de que el ícono sea visible si tu navbar es oscuro */
+  margin-left: auto; /* Esto empuja el carrito hacia la derecha */
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  /* Otros estilos de tu navbar */
+}

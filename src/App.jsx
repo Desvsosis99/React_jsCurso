@@ -1,3 +1,5 @@
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
@@ -7,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer greeting="Bienvenido a nuestro e-commerce!" />
+      <ItemListContainer greeting="Lo mejor de lo mejor en nuestro E-Commerce!" />
     </div>
   );
 }
