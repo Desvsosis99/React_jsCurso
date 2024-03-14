@@ -5,7 +5,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 function CartWidget() {
     return (
         <div className="ml-auto">
-            <button className="btn btn-outline-light">
+            <button className="btn btn-light">
                 <FontAwesomeIcon icon={faShoppingCart} />
                 {/* Puedes añadir aquí un indicador de la cantidad de items en el carrito */}
                 <span className="badge bg-danger ms-2">3</span> {/* Ejemplo con 3 items */}
