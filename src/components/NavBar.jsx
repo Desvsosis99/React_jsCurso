@@ -1,24 +1,28 @@
 import React from 'react';
-import CartWidget from './CartWidget'; // Asegúrate de que la ruta sea correcta.
+import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget';
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">Hakkens Digital</a>
+        <Link className="navbar-brand" to="/">Hakkens Digital</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Inicio</a>
+              <Link className="nav-link active" aria-current="page" to="/">Inicio</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/productos">Productos</a>
+              <Link className="nav-link" to="/category/speakers">Parlantes</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/contacto">Contacto</a>
+              <Link className="nav-link" to="/category/headphones">Audífonos</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/category/microphones">Micrófonos</Link>
             </li>
           </ul>
         </div>

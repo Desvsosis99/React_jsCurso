@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-function CartWidget() {
-    return (
-        <div className="ml-auto">
-            <button className="btn btn-light">
-                <FontAwesomeIcon icon={faShoppingCart} />
-                {/* Puedes añadir aquí un indicador de la cantidad de items en el carrito */}
-                <span className="badge bg-danger ms-2">3</span> {/* Ejemplo con 3 items */}
-            </button>
-        </div>
-    );
+function CartWidget({ itemCount }) {
+  return (
+    <div className="ml-auto">
+      <Link to="/cart">
+        <button className="btn btn-light">
+          <FontAwesomeIcon icon={faShoppingCart} />
+          <span className="badge bg-danger ms-2">{itemCount}</span>
+        </button>
+      </Link>
+    </div>
+  );
 }
 
 export default CartWidget;
